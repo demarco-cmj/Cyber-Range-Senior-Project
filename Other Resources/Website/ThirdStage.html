@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stage 3: PHP Injection</title>
+
+<body>
+
+    <h1>Stage 3: PHP Injection<br></h1>
+    <h2>Intro</h2>
+    <p>Hmmm... This site seems to be secured, but is it? I bet we can inject some PHP<br>
+        code that will print out the content of a file, maybe even the passwd file.<br>
+        If that is the case, I have given you the layout of their file system for you to mess with.</p>
+    <h2>Your Task:</h2>
+    <p>Create a python script that will connect to the site, and inject a php file that<br>
+        when called prints out the passwords located at /etc/passwd<br>
+        Once you have made a successful script, push it to your Git repo, and the server will<br>
+        give you the contents of the main passwd file that will have the password you need in it.
+    </p>
+
+    <h3>Sign up:</h3>
+    <form action="FirstStage_php.php" method="post">
+        First Name: <input type="text" name="first"><br>
+        Last Name: <input type="text" name="last"><br>
+        Email: <input type="text" name="email"><br>
+        Password: <input type="text" name="password"><br>
+        <input type="submit">
+    </form>
+    <h3><a href="ThirdStageLogin.html">Click here to log in</a></h3>
+
+    <p><a href="ThridStageComplete.html">Complete</a></p>
+</body>
+
+</html>

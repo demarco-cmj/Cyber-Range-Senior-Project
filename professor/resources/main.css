@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "NotoSans-Regular";
+    src: url("../../resources/fonts/NotoSans-Regular.ttf")
+}
+
+@font-face {
+    font-family: "NotoSans-Bold";
+    src: url("../../resources/fonts/NotoSans-Bold.ttf")
+}
+
+@font-face {
+    font-family: "NotoSans-Italic";
+    src: url("../../resources/fonts/NotoSans-Italic.ttf")
+}
+
+body {
+    color: #303030;
+    display: grid;
+    grid-gap: 0ch;
+    grid-template-columns: auto;
+    grid-template-areas: "navigation contnet";
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.content {
+    grid-area: content;
+}
+
+.area {
+    position: fixed; left:190px; top:105px;
+    background-color: whitesmoke;
+    text-align: center;
+    height: 89%;
+    width: 70%;
+    border-radius: 25px;
+    font-family: "NotoSans-Regular";
+}
+
+.area p {
+    font-size: 24px;
+}
+
+.area table {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.area td, th {
+    width: auto;
+    border: 1px solid black;
+}
+
+.title {
+    font-size: 42px;
+    margin-left: 27px;
+    margin-top:-35px;
+}
+
+.title span {
+    font-family: "NotoSans-Bold";
+    font-size: 50px;
+}
+
+.section {
+    font-size: 32px;
+    font-family: "NotoSans-Bold";
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.line {
+    size: 2px; 
+    width: 140px; 
+    color: #0083D6;
+    margin-top: -35px;
+    margin-left: -1px;
+}
+
+.nav {
+    font-size: 24;
+    font-family: "NotoSans-Regular";
+    color: #333333;
+    margin-left: 0px;
+    margin-top: -20;
+    line-height: 50px;
+}
+
+.nav span {
+    font-family: "NotoSans-Bold";
+}
+
+.navigation {
+    position: fixed; left:30px; top:105px;
+    background-color: snow;
+    text-align: center;
+    height: 89%;
+    min-width: 100px;
+    max-width: 200px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 63, 135, 100), 0 5px 10px rgba(0, 63, 135, 80);
+}

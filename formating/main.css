@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "NotoSans-Regular";
+  src: url("fonts/NotoSans-Regular.ttf")
+}
+
+@font-face {
+  font-family: "NotoSans-Bold";
+  src: url("fonts/NotoSans-Bold.ttf")
+}
+
+@font-face {
+  font-family: "NotoSans-Italic";
+  src: url("fonts/NotoSans-Italic.ttf")
+}
+
+html{
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  text-align: center;
+}
+
+.content{
+  max-width: 1250px;
+  margin: auto;
+  margin-top: 50%;
+  padding: 20px;
+  font-family: "NotoSans-Regular";
+  /* height: 50%; */
+}
+
+.button {                       
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #003F87;
+}
+
+.button1:hover {
+  background-color: #33659F;
+  color: white;
+}
+
+/*POPUPS*/
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f1f1f1;
+  min-width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* exercise formatting */
+
+.exercise {
+  text-align: left;
+  max-width: 1250px;
+  margin: auto;
+  margin-top: 15%;
+  padding: 20px;
+  font-family: "NotoSans-Regular";
+}

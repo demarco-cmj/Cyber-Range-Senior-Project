@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professor Portal</title>
+  <link href="resources/main.css" rel="stylesheet">
+</head>
+    <body>
+        <div id="header">
+          <div class="title">
+            <p>
+              Welcome Dr. <span>NAME HERE</span>
+            </p>
+          </div>
+          <div class="navigation">
+            <p class="section">Sections</p>
+            <hr class="line">
+            <p class="nav">
+              <a href="#" class="block mt-4 text-yellow-700 lg:mt-0 mr-10">
+                  <span>494231</span>
+              </a></br>
+              <a href="#" class="block mt-4  hover:text-indigo-600 lg:mt-0 mr-10">
+                  498753
+              </a></br>
+              <a href="#" class="block mt-4  hover:text-gray-700 lg:mt-0 mr-10">
+                  202544
+              </a></br>
+              <a href="#" class="block hover:text-gray-700 mt-4 lg:mt-0">
+                  351846
+              </a>
+          </p>
+          </div>
+
+        </div>
+        <div class="content">
+          <div class="area">
+            <p>494231 Class Scores</p>
+            <table><tr><th>ID</th><th>e1</th><th>e2</th><th>e3</th><th>e4</th><th>e5</th><th>e6</th><th>total</th></tr>
+              <tr><td>W01376939</td><td>10</td><td>10</td><td>20</td><td>20</td><td>20</td><td>20</td><td>100</td></tr>
+            </table>
+          </div>
+          <!-- <?php
+            $servername = "";
+            $username = "";
+            $password = "";
+            $db = "";
+
+            $connect = new mysqli($servername, $username, $password, $db);
+
+            if ($connect->connect_error) {
+              die("connection failed: " . $connect->connect_error);
+            }
+
+            $sql = "SELECT id, e1, e2, e3, e4, e5, e6, total FROM Scores";
+            $returned = $connect->query($sql);
+
+            if ($returned->num_rows > 0) {
+              echo "<table><tr><th>ID</th><th>e1</th><th>e2</th><th>e3</th><th>e4</th><th>e5</th><th>e6</th><th>total</th></tr>";
+              while ($row = $result->fetch_assoc()){
+                echo "<tr><td>" . $row["id"]". "</td><td>" . $row["e1"]. "</td><td>" . $row["e2"]. "</td><td>" . $row["e3"]. "</td><td>" . $row["e4"]. "</td><td>" . $row["e5"]. "</td><td>" . $row["e6"]. "</td><td>" . $row["total"]. "</td></tr>";
+              }
+              echo "</table>";
+            } else {
+              echo "Class is empty"
+            }
+          ?> -->
+        </div>
+
+    </body>
+</html>

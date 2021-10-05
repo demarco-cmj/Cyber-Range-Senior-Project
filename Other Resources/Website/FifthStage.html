@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stage 5: Cracking</title>
+
+<body>
+
+    <h1>Stage 5: Password Cracking<br></h1>
+    <h2>Intro</h2>
+    <p>Well, I got some bad news, and some good news about this site.<br>
+    Bad news: I don't see any of the vulnerabilities we have exploited on this site.<br>
+    Good news: Someone is constantly trying to access it. If we can get our hands on packets, we might be able to get their password!</p>
+    <h2>Your Task:</h2>
+    <p>You will need to capture a packet in transit and get the contents of it.<br>
+    You will then need to use a password cracker to decypher the contents and then use it to log in.
+    Press the 'Packet' button for the server to send the packet you must capture.</p>
+
+    <form action="FirstStage_php.php" method="post">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="text" name="password"><br>
+        <input type="submit">
+    </form>
+
+    <p><br><a href="FifthStage.html">Packet</a></p>
+
+    <p><a href="FifthStageComplete.html">Complete</a></p>
+</body>
+
+</html>

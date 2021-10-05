@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stage 6: XSS</title>
+
+<body>
+
+    <h1>Stage 6: Cross Site Scripting<br></h1>
+    <h2>Intro</h2>
+    <p>We're almost there! But this last stage seems a little more challenging, and I don't think<br>
+    getting the password by stealing a packet will work on this one.<br>
+    We need to get a little more sneaky. I know some site are suseptible to cross site<br>
+    scripting, so let's try that.</p>
+    <h2>Your Task:</h2>
+    <p>This site is a fourm that allows people without accounts to post messages.<br>
+        You will need to create a link that will allow you to get the user who clicks on it's session ID.<br>
+        You can then use their session ID to access their account.<br>
+        Once pushed to Git, the server will run the code, then click on the link as an admin on the server would.<br>
+        This should then send the session ID to where you direct it to.
+    </p>
+
+    <form action="FirstStage_php.php" method="post">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="text" name="password"><br>
+        <input type="submit">
+    </form>
+
+    <p><a href="Finished.html">Finished</a></p>
+</body>
+
+</html>

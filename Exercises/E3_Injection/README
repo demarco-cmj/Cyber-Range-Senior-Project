@@ -1,0 +1,33 @@
+PHP Injection
+
+Required Programs:
+
+    To get this stage to work, install apache2 then run the command to download and enable php for apache2: sudo apt-get install php libapache2-mod-php
+
+Set Up:
+
+    Set apache2's root directory to the Site_to_inject directory
+
+    Make sure Site_to_inject/site/data/ and Site_to_inject/site/data/users/ directories' permissions are set to 777 so that the site can add, read, and edit files located in that directory
+
+File details (located in Site_to_inject):
+
+    Exercise 3 - PHP Injection.ipynb (NOT IN Site_to_inject): The Jupyter Notebook that contains the student instructions.
+
+    index.html: The landing page. Contains a log in prompt which calls site/data/login.php, or a button to take them to site/signup.html.
+
+    site/signup.html: Contains a form that accepts a new user's email, username, and password. Calls site/data/user.php to create the user.
+
+    site/main.css: Contains the CSS formatting for the pages.
+
+    site/data/login.php: Takes in a username and password. Looks for the file in site/data/users/ that matches the username then checks the password located in that file. If passwords match print a success message. If no user with name or passwords don't match, print that it failed.
+
+    site/data/user.php: Take in the email, username, and password of a potential new user. Check if email is vaild (one '@' and one '.' after) and then if the username contains the correct characters (alphanumeric and '.'). If one of these fail, don't create account and let the user know. If they both pass, create a new file in ./users/ which will be named the username that contains the password and email.
+
+    site/data/users/admin: The admin account that the students need to get the information out of using php code injection
+
+Known bugs/Things to improve:
+
+    Positions of buttons can slightly move depending on the browser and the operating system.
+
+    There should probably be a better page that the student will access if the log in was a success. Right now it looks similar if the password fails.

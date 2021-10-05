@@ -1,0 +1,24 @@
+Broken Authentication
+
+File details:
+
+This stage requires students to run a server which should be stored in the "/opt/Resources/S2/server" folder. This requires the use of the python libraries "tornado" and "tornado-http-auth". These are used to handle the login popups and the webpages that the students should be accessing. If these aren't installed, use "pip install tornado" and "pip install tornado-http-auth" to install them.
+
+The rest of the files should be placed in the "/opt/Resources/S2/py_kernel" folder on the virtual machine. The only file that is missing from this git repo is the client file, which is just a sample file of a client solution that students might write. This was deleted so if students manage to get into the folders, they still won't have a code solution which they need a screenshot of. All the clinet does is print the password that returns a status code of 200 after attempting every password from the list of possible passwords.
+
+Next is the phrase_check file which is run in the last cell of the notebook, and will continuously loop input requests until the student types in the correct secret phrase. The phrase is located in the settings file.
+
+As stated above, the settings file contains the secret phrase. It also contains options to change the number of random strings generated for the potential password file, the path/file name for the password file which is what the students need to login with, and the path/file name for potential passwords which is what the students will be using to attempt a login.
+
+The last file is the random password generator, which will generate both a random password and bunch of random dummy passwords. The password file will be rewritten every time a new potential password file is created, so the password should always be within the potential passwords. The potential passwords will also only be rewritten if it doesn't already exist, so the potential passwords file will need to be deleted if students should have different passwords.
+
+In summary, the only files the students should have access to are the actual notebook itself, and the file with a bunch of random passwords. The server should be stored in "/opt/Resources/S2/server" on the VM, and the pw_generator, phrase_check, and settings should be stored in "/opt/Resources/S2/py_kernel".
+
+Known bugs/things to improve:
+
+The server has to be run outside of Jupyter notebook or there will be errors printed for a loop already being used. To modify the code so that it can be run in Jupyter, a function needs to be created that can be called to run the server. See Stage 5 for an example. 
+
+The server will also sometimes print an error saying a port is already in use, so scanning for a different port in that case should be done.
+
+Lastly, making sure the cells in the Jupyter notebook are actually hidden to students needs to tested. The cells currently show the full path to the files that contain the answers.
+

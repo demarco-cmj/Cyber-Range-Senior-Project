@@ -1,0 +1,25 @@
+Buffer Overflow
+
+Required Programs:
+
+        gcc and gdb, both should already be installed on any UNIX machine
+
+Set Up:
+
+        If a buffer overflow program has to be recompiled, you must use the following command to remove stack protection: gcc -no-pie -g -fno-stack-protector -o buffer_overflow [C file here]
+
+File details:
+
+        Exercise 1 - Buffer Overflow.ipynb: The Jupyter Notebook that contains the student instructions.
+
+        Buffer_Overflow1.c: Version 1 of the buffer overflow files. 16 character buffer with the useless_function on top for memory spaceing.
+
+        Buffer_Overflow2.c: Same as version 1, but with a 32 character buffer and a slightly different placeholder if statement.
+
+        Buffer_Overflow3.c: Version 3 of the buffer overflow files. 16 character buffer with the useless_function between break_me and main for different memory spaceing compared to version 1.
+
+        Buffer_Overflow4.c: Same as Version 3, but with a 32 character buffer and the useless_function moved below main. 
+
+Known bugs/Things to improve:
+
+        The ability for the student to call the version of this stage from the Jupyter Notebook would be a good addtion.
